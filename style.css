@@ -27,11 +27,7 @@ li{
     color: #F0F0F0 !important;
 border: 1px solid #F0F0F0 !important;
 }
-li:hover{
-    cursor: pointer;
-    background-color: #3B3B3F !important;
-    color: #F0F0F0;
-}
+
 .card-body-second{
     display: flex;
     justify-content: space-between;
@@ -58,4 +54,40 @@ li:hover{
 
 .navbar-brand{
     color: #F0F0F0 !important;
+}
+
+input[type='radio']{
+color: #3B3B3F !important;
+}
+
+label.list-group-item {
+    display: block;
+    margin: 3px;
+    padding: 10px;
+    background-color: #8B1FE3;
+    color: #F0F0F0;
+    border: 1px solid #F0F0F0 !important;
+    border-radius: 10px !important;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+label.list-group-item:hover{
+    cursor: pointer;
+    background-color: #3B3B3F !important;
+}
+
+input[type='radio'] {
+    appearance: none; 
+    width: 12px;
+    height: 12px;
+    
+    border-radius: 50%; 
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+input[type='radio']:checked {
+    background-color: #C0C0C0;
+    border: 1px solid #F0F0F0;   
 }

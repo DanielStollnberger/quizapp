@@ -51,24 +51,33 @@ let questions = {
         }
     ]
 };
-console.log(questions["question" + "2"][0].answers.answerOne);
 
 function showQuestion(quest) {
     let containerRef = document.getElementById('container');
+    switch (quest) {
+        case 1:
+            number = 'One';
+            containerRef.innerHTML = showTemplate(quest, number)
+            break;
+        case 2:
+            number = 'Two';
+            containerRef.innerHTML = showTemplate(quest, number)
+            break;
+        case 3:
+            number = 'Three';
+            containerRef.innerHTML = showTemplate(quest, number)
+            break;
+        case 4:
+            number = 'Four';
+            containerRef.innerHTML = showTemplate(quest, number)
+            break;
+        case 5:
+            number = 'Five';
+            containerRef.innerHTML = showTemplate(quest, number)
+            break;
 
-    if (quest == 1) {
-        number = 'One';
-    } else if (quest == 2) {
-        number = 'Two';
-    } else if (quest == 3) {
-        number = 'Three';
-    } else if (quest == 4) {
-        number = 'Three';
-    } else if (quest == 5) {
-        number = 'Three';
-    } else {
-containerRef.innerHTML = `<p style='color: white;'>The end is near</p>`;
+        default:
+            containerRef.innerHTML = `<p style='color: white;'>The end is near</p>`;
+            break;
     }
-
-    containerRef.innerHTML = showTemplate(quest, number);
 }
