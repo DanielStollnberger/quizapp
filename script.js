@@ -6,7 +6,8 @@ let questions = {
                 "answerOne": "Mark Gebauer",
                 "answerTwo": "Hakan Calagnoglu",
                 "answerThree": "Timmothy Weah",
-                "answerFour": "George Washington"
+                "answerFour": "George Washington",
+                "correctAnswer": "George Washington"
             }
         }
     ], "question2": [
@@ -16,7 +17,8 @@ let questions = {
                 "answerOne": "Major Monogwam der geile oida",
                 "answerTwo": "Ferb",
                 "answerThree": "Jeremy",
-                "answerFour": "Perry"
+                "answerFour": "Perry",
+                "correctAnswer": "Major Monogwam der geile oida"
             }
         }
     ], "question3": [
@@ -26,7 +28,8 @@ let questions = {
                 "answerOne": "Thirty-eight",
                 "answerTwo": "Seven",
                 "answerThree": "Three",
-                "answerFour": "Twenty-one"
+                "answerFour": "Twenty-one",
+                "correctAnswer": "Three"
             }
         }
     ], "question4": [
@@ -36,7 +39,8 @@ let questions = {
                 "answerOne": "Billy",
                 "answerTwo": "Marcus",
                 "answerThree": "Thomas",
-                "answerFour": "Abdulrahman Selaimak Vahid Mohammed"
+                "answerFour": "Abdulrahman Selaimak Vahid Mohammed",
+                "correctAnswer": "Abdulrahman Selaimak Vahid Mohammed"
             }
         }
     ], "question5": [
@@ -46,13 +50,17 @@ let questions = {
                 "answerOne": "Christiano Ronaldo",
                 "answerTwo": "Lionel Messi",
                 "answerThree": "Anthony",
-                "answerFour": "IShowSpeed"
+                "answerFour": "IShowSpeed",
+                "correctAnswer": "Anthony"
             }
         }
     ]
 };
 
-function showQuestion(quest) {
+let quest = 1;
+
+function showQuestion() {
+   
     let containerRef = document.getElementById('container');
     switch (quest) {
         case 1:
@@ -81,3 +89,15 @@ function showQuestion(quest) {
             break;
     }
 }
+
+function testAnswer() {
+    if (document.querySelector('input[name="answer"]:checked').value == questions['question' + quest][0].answers.correctAnswer) {
+        quest++;
+        showQuestion(); 
+    } else {
+        alert('incorrect answer man, come on')
+    }
+}
+
+
+

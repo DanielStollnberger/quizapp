@@ -1,4 +1,4 @@
-function showTemplate(quest, number) {
+function showTemplate(quest,number) {
     return `<div class="card" style="width: 25rem;">
             <img src="./assets/img/questionmark.jpg" class="card-img-top" alt="..."
                 style="filter: grayscale(); border-radius: 15px;">
@@ -16,7 +16,7 @@ function showTemplate(quest, number) {
                     ${questions['question' + quest][0].answers.answerTwo}
                 </label>
                 <label class='list-group-item'>
-                    <input type="radio" name='answer' value="${questions['question' + quest][0].answers.answerThree}">
+                    <input type="radio" name='answer' value="${questions['question' + quest][0].answers.answerThree}" required>
                     ${questions['question' + quest][0].answers.answerThree}
                 </label>
                 <label class='list-group-item'>
@@ -26,7 +26,7 @@ function showTemplate(quest, number) {
             </ul>
             <div class="card">
                 <div class="card-body-second">
-                    <div><b>${quest}</b> of <b>5</b></div><input type='submit' value='Next Question' class="btn btn-success" onclick='showQuestion(${quest + 1})'>
+                    <div><b>${quest}</b> of <b>5</b></div><input type='submit' value='Next Question' class="btn btn-success" onclick="testAnswer()">
                 </div>
             </div>
         </div>`;
